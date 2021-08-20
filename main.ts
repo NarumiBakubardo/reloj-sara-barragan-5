@@ -6,9 +6,14 @@ basic.forever(function () {
     basic.pause(100)
     if (Segundos == 59) {
         Segundos = 1
-    }
-    if (Segundos == 59) {
-        Segundos += Minutos
         Minutos += 1
+    }
+    if (Minutos == 59) {
+        Segundos = 1
+        Minutos += 1
+    }
+    if (horas == 59) {
+        Minutos += 1
+        horas = 1
     }
 })
